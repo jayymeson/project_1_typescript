@@ -38,7 +38,7 @@ function logPerson(persons) {
     else {
         additionalInformation = persons.occupation;
     }
-    console.log(`${persons.name}, ${persons.age}, ${additionalInformation} and ${persons.nickname} `);
+    console.log(`${persons.name}, ${persons.age}, ${additionalInformation} and the nickname ${persons.nickname} `);
 }
 exports.logPerson = logPerson;
 exports.persons.forEach(logPerson);

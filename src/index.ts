@@ -19,7 +19,6 @@ interface Admin {
 // Kind of what the Person const should look like
 export type Person = Users | Admin;
 
-
 // Person const defining the users and who is the Administrator.
 export const persons: Person[] = [
   {
@@ -47,18 +46,19 @@ export const persons: Person[] = [
     role: "World saver",
   },
 ];
- 
+
 // Function logPerson
 
 export function logPerson(persons: Person) {
   let additionalInformation: string | undefined;
-  if(persons.role) {
+  if (persons.role) {
     additionalInformation = persons.role;
   } else {
-    additionalInformation = persons.occupation
+    additionalInformation = persons.occupation;
   }
-  console.log(`${persons.name}, ${persons.age}, ${additionalInformation} and t ${persons.nickname} `);
-  
+  console.log(
+    `${persons.name}, ${persons.age}, ${additionalInformation} and the nickname ${persons.nickname} `
+  );
 }
 
-persons.forEach(logPerson)
+persons.forEach(logPerson);
